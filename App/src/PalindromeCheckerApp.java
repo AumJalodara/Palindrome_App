@@ -7,26 +7,46 @@ public class PalindromeCheckerApp {
 
         public static void main(String[] args) {
 
-            Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Enter a string: ");
-            String input = scanner.nextLine();
 
-            String reversed = "";
 
-            // Iterate from the last character to the first.
-            for (int i = input.length() - 1; i >= 0; i--) {
-                reversed = reversed + input.charAt(i);
-            }
+                public static void main(String[] args) {
 
-            // Compare original and reversed strings
-            if (input.equals(reversed)) {
-                System.out.println("Result: The given string is a Palindrome.");
-            } else {
-                System.out.println("Result: The given string is NOT a Palindrome.");
-            }
+                    // Declare and initialize the input string.
+                    String input = "radar";
 
-            scanner.close();
+                    // Convert the string into a character array.
+                    char[] chars = input.toCharArray();
+
+                    // Initialize pointer at the beginning.
+                    int start = 0;
+
+                    // Initialize pointer at the end.
+                    int end = chars.length - 1;
+
+                    // Assume palindrome initially.
+                    boolean isPalindrome = true;
+
+                    // Continue comparison until pointers cross.
+                    while (start < end) {
+
+                        if (chars[start] != chars[end]) {
+                            isPalindrome = false;
+                            break;
+                        }
+
+                        start++;
+                        end--;
+                    }
+
+                    // Display result
+                    if (isPalindrome) {
+                        System.out.println(input + " is a Palindrome.");
+                    } else {
+                        System.out.println(input + " is NOT a Palindrome.");
+                    }
+                }
+
         }
 
 }
