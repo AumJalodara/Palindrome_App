@@ -10,7 +10,7 @@ public class PalindromeCheckerApp {
 
 
 
-                public static void main(String[] args) {
+
 
                     // Declare and initialize the input string.
                     String input = "radar";
@@ -49,4 +49,3 @@ public class PalindromeCheckerApp {
 
         }
 
-}
